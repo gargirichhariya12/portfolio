@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/b9c979a38c.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <script src="script.js" defer></script>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-gray-300 font-sans relative" id="vanta-bg">
+  
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md ">
+    <div class="flex items-center justify-between px-6 md:px-10 py-4">
+      <!-- Logo -->
+      <div class="text-purple-400 font-bold text-xl">GR</div>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-10 text-gray-400">
+        <li class="text-purple-400 cursor-pointer">Home</li>
+        <li class="hover:text-white transition">
+          <a href="#work">Works</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="#about">About me</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="#contact">Contact Me</a>
+        </li>
+      </ul>
+
+
+
+      <!-- Desktop Resume Button -->
+
+      <a href="assests/Gargi-Richhariya.pdf" target="_blank"
+        class="hidden md:block bg-purple-400 text-white px-6 py-2 rounded-md hover:opacity-90 transition">
+
+        Resume
+
+      </a>
+
+
+
+      <!-- Mobile Menu Button -->
+
+      <button id="menu-btn" class="md:hidden text-white text-2xl">
+
+        ☰
+
+      </button>
+
+    </div>
+
+
+
+    <!-- Mobile Menu -->
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black/90 backdrop-blur-md  px-6 py-6 space-y-4 text-gray-300">
+
+
+
+      <a href="#home" class="block hover:text-purple-400">Home</a>
+
+      <a href="#work" class="block hover:text-purple-400">Works</a>
+
+      <a href="#about" class="block hover:text-purple-400">About me</a>
+
+      <a href="#contact" class="block hover:text-purple-400">Contact Me</a>
+
+
+
+      <a href="assests/Gargi-Richhariya.pdf" target="_blank"
+        class="block text-center bg-purple-400 text-white py-2 rounded-md mt-4">
+
+        Resume
+
+      </a>
+
+    </div>
+
+  </nav>
+
+  <section class="flex flex-col items-center justify-center text-center mt-32 relative min-h-[80vh]" id="home">
+    <h1 class="text-4xl md:text-5xl font-semibold">
+      Hi! I am <span class="text-purple-400">Gargi Richhariya</span>
+    </h1>
+
+    <p class="max-w-2xl mt-6 text-gray-400 leading-relaxed px-4">
+      Building intuitive, responsive digital experiences with modern frontend
+      technologies, focused on clean UI and smooth user interactions.
+    </p>
+
+    <div class="mt-12 relative">
+      <img src="assets/hero.png" alt="Avatar" class="w-52 sm:w-48 mx-auto" />
+
+      <span
+        class="absolute -left-16 sm:-left-20 top-10 bg-gray-900/80 px-4 py-2 rounded-full text-sm border border-gray-700 backdrop-blur-sm">
+        MERN Stack
+      </span>
+
+      <span
+        class="absolute -right-20 sm:-right-20 top-16 bg-gray-900/80 px-5 py-2 rounded-full text-sm border border-gray-700 backdrop-blur-sm">
+        UI-UX designer
+      </span>
+
+      <span
+        class="absolute -left-20 sm:-left-28 bottom-5 sm:bottom-5 bg-gray-900/80 px-4 py-2 rounded-full text-sm text-green-400 border border-gray-700 backdrop-blur-sm">
+        Wireframe Design
+      </span>
+
+      <span
+        class="absolute -right-16 sm:-right-[4rem] bottom-6 bg-gray-900/80 px-4 py-2 rounded-full text-sm text-blue-400 border border-gray-700 backdrop-blur-sm">
+        Front-End Dev
+      </span>
+    </div>
+
+    <a href="#work">
+      <div class="mt-10">
+        <div class="w-10 h-14 border-2 border-purple-400 rounded-full flex items-center justify-center mx-auto">
+          <span class="animate-bounce text-purple-400 text-2xl">⌄</span>
+        </div>
+        <p class="mt-2 text-purple-400">Projects</p>
+      </div>
+    </a>
+  </section>
+
+  <section class="mx-4 sm:mx-8 lg:mx-16 px-4 sm:px-6 lg:px-10 mt-24" id="about">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      <div class="flex-1 flex justify-center">
+        <img src="assets/avatar2.png" alt="Avatar"
+          class="w-56 sm:w-64 md:w-72 lg:w-[310px] h-auto max-h-[400px] object-contain" />
+      </div>
+
+      <div class="flex-1 text-center lg:text-left">
+        <p class="text-sm sm:text-base font-semibold mb-3 text-purple-400">
+          <span class="text-gray-400">I'm </span>
+          MERN Stack Developer & UI/UX Designer
+        </p>
+
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">
+          Gargi Richhariya
+        </h2>
+
+        <p class="text-gray-400 leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0">
+          I’m a BTech CSE student passionate about MERN stack development and UI/UX design,
+          focused on building responsive, user-friendly web experiences with modern tools.
+        </p>
+
+        <ul class="flex flex-wrap justify-center lg:justify-start gap-4">
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=html" class="h-7" /> <span>HTML</span>
+          </li>
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=css" class="h-7" /> <span>Tailwind CSS</span>
+          </li>
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=js" class="h-7" /> <span>JavaScript</span>
+          </li>
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=react" class="h-7" /> <span>React</span>
+          </li>
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=mysql&theme=dark" class="h-7" /> <span>SQL</span>
+          </li>
+          <li
+            class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300 hover:border-purple-400/50 transition">
+            <img src="https://skillicons.dev/icons?i=figma&theme=dark" class="h-7" /> <span>Figma</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="max-w-7xl mx-auto py-16 px-4 overflow-hidden">
+    <div class="flex justify-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-semibold relative inline-block">
+        Projects
+        <span class="absolute left-0 -bottom-2 h-[2px] w-full bg-purple-400"></span>
+      </h2>
+    </div>
+
+    <div id="slider" class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 no-scrollbar mt-4 pb-4">
+
+      <div
+        class="project-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-lg rounded-xl p-3 border border-white/10 transition-all duration-300 hover:bg-white/10">
+        <img src="assets/project1.png" class="mx-auto h-40 sm:h-48 object-contain mb-6" alt="Kaira" />
+        <h3 class="mt-2 text-sm text-gray-400">Kaira - E-commerce website</h3>
+        <p class="mt-2 text-sm text-gray-400 flex-grow mb-2">Enhancing product discovery and user engagement.</p>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-400">HTML5</span>
+          <span class="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-400">CSS3</span>
+        </div>
+        <button class="mt-6 text-purple-400 flex items-center gap-1 group transition-all">
+          <a href="https://kaira-pi.vercel.app/" target="_blank">Take a Peek</a> <span
+            class="group-hover:translate-x-1 transition-transform">→</span>
+        </button>
+      </div>
+
+      <div
+        class="project-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-lg rounded-xl p-3 border border-white/10 transition-all duration-300 hover:bg-white/10">
+        <img src="assets/project2.png" class="mx-auto h-40 sm:h-48 object-contain mb-5" alt="Glam Rapido" />
+        <h3 class="text-lg font-semibold">Glam Rapido - Beauty App</h3>
+        <p class="mt-3 text-sm text-gray-400 flex-grow mb-2">Beauty services on demand.</p>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-400">JS</span>
+        </div>
+        <button class="mt-6 text-purple-400 flex items-center gap-1 group transition-all">
+          <a href="https://www.glamrapido.com/" target="_blank">Take a Peek</a> <span
+            class="group-hover:translate-x-1 transition-transform">→</span>
+        </button>
+      </div>
+
+      <div
+        class="project-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-lg rounded-xl p-3 border border-white/10 transition-all duration-300 hover:bg-white/10">
+        <img src="assets/project3.png" class="mx-auto w-full h-40 object-contain mb-5" alt="Opinion Battle" />
+        <h3 class="text-lg font-semibold">Opinion Battle</h3>
+        <p class="mt-2 text-sm text-gray-400 flex-grow mb-2">Ag-Grid implementation.</p>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-400">React.js</span>
+        </div>
+        <button class="mt-6 text-purple-400 flex items-center gap-1 group transition-all">
+          <a href="https://fact-wise-ag-grid.vercel.app/" target="_blank">Take a Peek</a> <span
+            class="group-hover:translate-x-1 transition-transform">→</span>
+        </button>
+      </div>
+
+      <div
+        class="project-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-[360px] bg-white/5 backdrop-blur-lg rounded-xl p-3 border border-white/10 transition-all duration-300 hover:bg-white/10">
+        <img src="assets/notify-buddy.png" class="mx-auto h-40 object-contain mb-6" alt="Notify Buddy" />
+        <h3 class="text-lg font-semibold">Notify Buddy</h3>
+        <p class="mt-2 text-sm text-gray-400 flex-grow mb-2">App Design.</p>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="px-3 py-1 text-xs rounded-full bg-teal-400/10 text-teal-400">Figma</span>
+        </div>
+        <button class="mt-6 text-purple-400 flex items-center gap-1 group transition-all">
+          Take a Peek <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-white/5 border-t border-white/10 px-10 py-12 mt-24" id="contact">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-xl font-semibold text-purple-400">Gargi Richhariya</h3>
+        <p class="text-gray-400 text-sm mt-2">Frontend Developer & UI/UX Designer.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-medium mb-3">Contact</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li>Email: <a href="mailto:Gargirichhariya4@gmail.com"
+              class="hover:text-purple-400">Gargirichhariya4@gmail.com</a></li>
+          <li>Location: India</li>
+        </ul>
+      </div>
+      <div class="flex gap-4 mt-2">
+        <a href="https://github.com/gargirichhariya12" target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-purple-500/20 transition">
+          <img src="https://skillicons.dev/icons?i=github&theme=dark" class="h-5" />
+        </a>
+        <a href="https://www.linkedin.com/in/gargi-richhariya-905120256/" target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-purple-500/20 transition">
+          <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" class="h-5" />
+        </a>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 text-sm mt-10">© 2025 Gargi Richhariya. All rights reserved.</div>
+  </footer>
+
+</body>
+
+</html>
