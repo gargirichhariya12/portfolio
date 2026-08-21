@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Work | Gargi Richhariya Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/b9c979a38c.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-gray-300 font-sans relative min-h-screen" id="vanta-bg">
+  
+  <!-- Navigation Header -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+    <div class="flex items-center justify-between px-6 md:px-10 py-4">
+      <!-- Logo -->
+      <a href="index.html" class="text-purple-400 font-bold text-xl hover:opacity-80 transition">GR</a>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 text-gray-400 items-center">
+        <li class="hover:text-white transition">
+          <a href="index.html#home">Home</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="index.html#work">Works</a>
+        </li>
+        <li class="text-purple-400 font-medium cursor-pointer border-b-2 border-purple-400 pb-1">
+          <a href="freelancing.html">Freelancing</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="index.html#about">About me</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="index.html#experience">Experience</a>
+        </li>
+        <li class="hover:text-white transition">
+          <a href="index.html#contact">Contact Me</a>
+        </li>
+      </ul>
+
+      <!-- Desktop Resume Button -->
+      <a href="assets/Gargi-Richhariya.pdf" target="_blank"
+        class="hidden md:block bg-purple-400 text-white px-6 py-2 rounded-md hover:opacity-90 transition font-medium shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+        Resume
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md px-6 py-6 space-y-4 text-gray-300 border-b border-white/10">
+      <a href="index.html#home" class="block hover:text-purple-400">Home</a>
+      <a href="index.html#work" class="block hover:text-purple-400">Works</a>
+      <a href="freelancing.html" class="block text-purple-400 font-semibold">Freelancing</a>
+      <a href="index.html#about" class="block hover:text-purple-400">About me</a>
+      <a href="index.html#experience" class="block hover:text-purple-400">Experience</a>
+      <a href="index.html#contact" class="block hover:text-purple-400">Contact Me</a>
+      <a href="assets/Gargi-Richhariya.pdf" target="_blank"
+        class="block text-center bg-purple-400 text-white py-2 rounded-md mt-4 font-medium">
+        Resume
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Hero Section for Freelancing -->
+  <section class="max-w-7xl mx-auto pt-36 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        Client Projects & Brand Showcase
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+        Freelance <span class="text-purple-400">Projects</span>
+      </h1>
+      <p class="text-base sm:text-lg text-gray-400 leading-relaxed">
+        Building custom digital solutions for startups, companies, and individuals — ranging from high-security company web portfolios and full application frontends to distinctive logo design and brand identities.
+      </p>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+      <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-purple-500/30 transition">
+        <div class="text-3xl font-bold text-purple-400 mb-1">5+</div>
+        <div class="text-sm text-gray-400">Completed Projects</div>
+      </div>
+      <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-purple-500/30 transition">
+        <div class="text-3xl font-bold text-purple-400 mb-1">100%</div>
+        <div class="text-sm text-gray-400">Client Satisfaction</div>
+      </div>
+      <div class="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-purple-500/30 transition">
+        <div class="text-3xl font-bold text-purple-400 mb-1">Design & Dev</div>
+        <div class="text-sm text-gray-400">Full-Stack Solutions</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Projects Section -->
+  <section class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    
+    <!-- Filter Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <button data-filter="all" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-purple-500 text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+        All Projects
+      </button>
+      <button data-filter="web-dev" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 transition-all">
+        Web Development
+      </button>
+      <button data-filter="branding" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 transition-all">
+        Logo & Branding
+      </button>
+      <button data-filter="frontend" class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 transition-all">
+        Frontend Applications
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="freelance-grid">
+
+      <!-- Project 1: Zero Trust Bastian -->
+      <div class="project-card web-dev frontend bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col group">
+        <div class="relative overflow-hidden h-64 bg-black/40">
+          <img src="assets/zero-trust-bastian.png" alt="Zero Trust Bastian Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          <span class="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">
+            Cybersecurity Portfolio
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex flex-col flex-grow">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Zero Trust Bastian</h3>
+            <span class="text-xs text-gray-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">Project #1</span>
+          </div>
+          <p class="text-purple-400 text-sm font-medium mb-3">Cybersecurity Company Website</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+            Designed and engineered a high-security visual portfolio for **Zero Trust Bastian**, a cybersecurity solutions company. Built with modern dark cyber UI, high-impact visuals, zero-trust architecture concepts, and smooth cross-device responsiveness.
+          </p>
+
+          <!-- Highlights List -->
+          <ul class="text-xs text-gray-300 space-y-2 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Cybersecurity-focused dark theme UI design
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Responsive layouts optimized for performance
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Clear presentation of security services & architecture
+            </li>
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">HTML5 / CSS3</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">JavaScript</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Tailwind CSS</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">UI/UX Design</span>
+          </div>
+
+          <button onclick="openModal('zero-trust')" class="w-full mt-auto bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 py-3 rounded-xl border border-purple-500/40 text-sm font-semibold transition flex items-center justify-center gap-2 group-hover:bg-purple-500 group-hover:text-white">
+            <span>Explore Project Overview</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 2: Zocaro -->
+      <div class="project-card frontend branding bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col group">
+        <div class="relative overflow-hidden h-64 bg-black/40">
+          <img src="assets/zocaro.png" alt="Zocaro Logo & Frontend" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          <span class="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">
+            Logo & Frontend Application
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex flex-col flex-grow">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Zocaro Application</h3>
+            <span class="text-xs text-gray-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">Project #2</span>
+          </div>
+          <p class="text-purple-400 text-sm font-medium mb-3">Logo Design & Frontend App Development</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+            Designed the official brand logo mark and built the complete, responsive frontend application for **Zocaro**. Crafted interactive UI components, sleek user dashboards, and structured frontend logic for optimal user experience.
+          </p>
+
+          <!-- Highlights List -->
+          <ul class="text-xs text-gray-300 space-y-2 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Designed custom brand logo and visual guidelines
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Architected responsive frontend app user screens
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Smooth micro-interactions & component state management
+            </li>
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Logo Design</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Frontend Dev</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">React.js</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-400/20">Tailwind CSS</span>
+          </div>
+
+          <button onclick="openModal('zocaro')" class="w-full mt-auto bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 py-3 rounded-xl border border-purple-500/40 text-sm font-semibold transition flex items-center justify-center gap-2 group-hover:bg-purple-500 group-hover:text-white">
+            <span>Explore Project Overview</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 3: Dharma Tech Solution -->
+      <div class="project-card branding bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col group">
+        <div class="relative overflow-hidden h-64 bg-black/40">
+          <img src="assets/dharma-tech.png" alt="Dharma Tech Solution Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          <span class="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">
+            Brand Identity & Logo Design
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex flex-col flex-grow">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Dharma Tech Solution</h3>
+            <span class="text-xs text-gray-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">Project #3</span>
+          </div>
+          <p class="text-purple-400 text-sm font-medium mb-3">Startup Company Brand Logo Design</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+            Conceptualized and designed the official brand logo mark for startup company **Dharma Tech Solution**. Created vector logo assets, color palette guidelines, and branding materials reflecting technological expertise and reliability.
+          </p>
+
+          <!-- Highlights List -->
+          <ul class="text-xs text-gray-300 space-y-2 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Conceptualized modern tech startup logo symbol
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Delivered scalable vector assets for print & digital
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Brand identity, typography & color system definition
+            </li>
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Logo Design</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Brand Identity</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Vector Art</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Figma / Illustrator</span>
+          </div>
+
+          <button onclick="openModal('dharma-tech')" class="w-full mt-auto bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 py-3 rounded-xl border border-purple-500/40 text-sm font-semibold transition flex items-center justify-center gap-2 group-hover:bg-purple-500 group-hover:text-white">
+            <span>Explore Project Overview</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 4: Roadmap Project -->
+      <div class="project-card web-dev frontend bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col group">
+        <div class="relative overflow-hidden h-64 bg-black/40">
+          <img src="assets/roadmap.png" alt="Interactive Roadmap Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          <span class="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">
+            Web Application & Roadmap UI
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex flex-col flex-grow">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Roadmap Platform</h3>
+            <span class="text-xs text-gray-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">Project #4</span>
+          </div>
+          <p class="text-purple-400 text-sm font-medium mb-3">Interactive Pathway Project (College Senior Project)</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+            Built an interactive roadmap web application tailored for a college senior project. Designed visually engaging step-by-step learning paths, progress nodes, and intuitive dashboard navigation to help users structure complex learning goals.
+          </p>
+
+          <!-- Highlights List -->
+          <ul class="text-xs text-gray-300 space-y-2 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Interactive visual roadmap milestone tracking
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Clean node-based UI flow and layout architecture
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Built custom responsive layout for desktop and mobile
+            </li>
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Frontend Dev</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Web App</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">JavaScript</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">UI/UX Layout</span>
+          </div>
+
+          <button onclick="openModal('roadmap')" class="w-full mt-auto bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 py-3 rounded-xl border border-purple-500/40 text-sm font-semibold transition flex items-center justify-center gap-2 group-hover:bg-purple-500 group-hover:text-white">
+            <span>Explore Project Overview</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 5: Intelliatech Company Portfolio UI -->
+      <div class="project-card web-dev frontend branding bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col group md:col-span-2 lg:col-span-1">
+        <div class="relative overflow-hidden h-64 bg-black/40">
+          <img src="assets/intelliatech.png" alt="Intelliatech Portfolio UI Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          <span class="absolute top-4 left-4 bg-purple-500/20 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">
+            Internship UI/UX Design
+          </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex flex-col flex-grow">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Intelliatech Company Portfolio UI</h3>
+            <span class="text-xs text-gray-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/10">Project #5</span>
+          </div>
+          <p class="text-purple-400 text-sm font-medium mb-3">Corporate Portfolio UI/UX Design (Internship)</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+            Designed the complete user interface and visual experience for the corporate website of **Intelliatech Solutions** during internship period. Focused on corporate branding, intuitive service navigation, clean component design, and responsive visual hierarchy.
+          </p>
+
+          <!-- Highlights List -->
+          <ul class="text-xs text-gray-300 space-y-2 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Designed corporate UI/UX layout for company portfolio
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Formulated clean visual hierarchy and component design
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-purple-400">✓</span> Delivered high-fidelity prototypes and responsive layouts
+            </li>
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">UI/UX Design</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Figma</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Wireframing</span>
+            <span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">Corporate Design</span>
+          </div>
+
+          <button onclick="openModal('intelliatech')" class="w-full mt-auto bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 py-3 rounded-xl border border-purple-500/40 text-sm font-semibold transition flex items-center justify-center gap-2 group-hover:bg-purple-500 group-hover:text-white">
+            <span>Explore Project Overview</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Freelance Services Offered Section -->
+  <section class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-12">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-white">
+        Services I Offer as a <span class="text-purple-400">Freelancer</span>
+      </h2>
+      <p class="text-gray-400 text-sm max-w-xl mx-auto mt-3">
+        Tailored digital solutions to elevate your brand, application, or company presence.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-5 border border-purple-500/30">
+          💻
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Web & App Frontend Dev</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Building fast, modern, and responsive web applications using React, HTML/CSS, JavaScript, and Tailwind CSS. Clean, maintainable code structured for scale.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-5 border border-purple-500/30">
+          🎨
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Logo & Brand Identity</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Crafting distinctive logos, vector emblems, brand color schemes, and visual identity guidelines for startups, products, and businesses.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-5 border border-purple-500/30">
+          ✨
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">UI/UX & Interactive Design</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Designing intuitive user flows, visual hierarchy, dashboard wireframes, and interactive prototypes tailored for user satisfaction and conversion.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="max-w-5xl mx-auto my-16 px-4">
+    <div class="bg-gradient-to-r from-purple-900/40 via-purple-600/20 to-black/60 backdrop-blur-lg border border-purple-500/30 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Have a Project in Mind?</h2>
+      <p class="text-gray-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-8">
+        Whether you need a full application frontend, a custom company portfolio, or a high-impact logo design — let's collaborate and bring your ideas to life!
+      </p>
+      <a href="index.html#contact" class="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-medium px-8 py-3.5 rounded-full transition-all shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+        <span>Get in Touch</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white/5 border-t border-white/10 px-10 py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-xl font-semibold text-purple-400">Gargi Richhariya</h3>
+        <p class="text-gray-400 text-sm mt-2">Frontend Developer & UI/UX Designer.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-medium mb-3">Contact</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li>Email: <a href="mailto:Gargirichhariya4@gmail.com" class="hover:text-purple-400">Gargirichhariya4@gmail.com</a></li>
+          <li>Location: Indore, India</li>
+        </ul>
+      </div>
+      <div class="flex gap-4 mt-2">
+        <a href="https://github.com/gargirichhariya12" target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-purple-500/20 transition">
+          <img src="https://skillicons.dev/icons?i=github&theme=dark" class="h-5" />
+        </a>
+        <a href="https://www.linkedin.com/in/gargi-richhariya-905120256/" target="_blank"
+          class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-purple-500/20 transition">
+          <img src="https://skillicons.dev/icons?i=linkedin&theme=dark" class="h-5" />
+        </a>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 text-sm mt-10">© 2025 Gargi Richhariya. All rights reserved.</div>
+  </footer>
+
+  <!-- Modal Component for Project Details -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-[#0f0f15] border border-white/15 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl my-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition">
+        ✕
+      </button>
+
+      <div id="modal-content">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript logic -->
+  <script>
+    // Vanta.js background setup
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x8150de, // purple
+      backgroundColor: 0x000000, // black
+      maxDistance: 14.0,
+      spacing: 13.0,
+      showDots: false,
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Filter Buttons logic
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        // Active button styles
+        filterBtns.forEach(b => {
+          b.classList.remove("bg-purple-500", "text-white", "shadow-[0_0_15px_rgba(168,85,247,0.3)]");
+          b.classList.add("bg-white/5", "text-gray-400", "border", "border-white/10");
+        });
+        btn.classList.remove("bg-white/5", "text-gray-400", "border", "border-white/10");
+        btn.classList.add("bg-purple-500", "text-white", "shadow-[0_0_15px_rgba(168,85,247,0.3)]");
+
+        const filter = btn.getAttribute("data-filter");
+        projectCards.forEach(card => {
+          if (filter === "all" || card.classList.contains(filter)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+
+    // Project Details Data
+    const projectData = {
+      'zero-trust': {
+        title: "Zero Trust Bastian",
+        category: "Cybersecurity Company Portfolio",
+        image: "assets/zero-trust-bastian.png",
+        description: "Zero Trust Bastian requested a dedicated corporate portfolio website to showcase their advanced cybersecurity services, zero-trust architecture solutions, and threat-prevention capabilities.",
+        role: "Frontend Developer & UI Designer",
+        deliverables: ["Cybersecurity Portfolio Layout", "Interactive Security Features Showcase", "Mobile & Desktop Optimization", "Modern Dark Futuristic Aesthetic"],
+        stack: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "UI/UX Design"]
+      },
+      'zocaro': {
+        title: "Zocaro Application",
+        category: "Logo Design & Frontend Application",
+        image: "assets/zocaro.png",
+        description: "For Zocaro, I conceptualized and crafted the brand logo identity, followed by building the complete, responsive frontend application interface.",
+        role: "Brand Identity Designer & Frontend Developer",
+        deliverables: ["Custom Vector Logo Design", "Complete Frontend Web App UI", "Interactive Workflows & Component Libraries", "Responsive Styling across all breakpoints"],
+        stack: ["Logo Design", "React.js", "Tailwind CSS", "JavaScript", "Branding"]
+      },
+      'dharma-tech': {
+        title: "Dharma Tech Solution",
+        category: "Startup Brand Identity & Logo Design",
+        image: "assets/dharma-tech.png",
+        description: "Dharma Tech Solution is an emerging tech startup. I was commissioned to create their core visual identity, including the official brand logo symbol and typography system.",
+        role: "Brand Identity & Graphic Designer",
+        deliverables: ["Startup Logo Design", "Vector Asset Package (SVG, PNG, EPS)", "Brand Color Palette Definition", "Typography & Visual Identity Guidelines"],
+        stack: ["Logo Design", "Figma", "Adobe Illustrator", "Graphic Design", "Vector Art"]
+      },
+      'roadmap': {
+        title: "Interactive Roadmap Platform",
+        category: "College Senior Web Application Project",
+        image: "assets/roadmap.png",
+        description: "Collaborated with a college senior to build an interactive learning pathway and career roadmap application. Designed intuitive step-by-step progress nodes and interactive tracking cards.",
+        role: "Frontend Developer & UI Specialist",
+        deliverables: ["Step-by-step Learning Pathway Visualizer", "Progress Node Status Indicators", "Responsive Card Layout", "Custom Dark Theme Interactive Dashboard"],
+        stack: ["Frontend Development", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Interactive UI"]
+      },
+      'intelliatech': {
+        title: "Intelliatech Company Portfolio UI",
+        category: "Corporate Portfolio UI/UX Design (Internship)",
+        image: "assets/intelliatech.png",
+        description: "Designed the complete user interface and visual experience for the corporate website of Intelliatech Solutions Pvt. Ltd. during internship period. Created clean service presentation layouts, interactive component hierarchy, and responsive styling.",
+        role: "UI/UX Designer Intern",
+        deliverables: ["Corporate Portfolio UI Layout", "Service & Solutions Component Cards", "High-Fidelity Figma Prototypes", "Responsive Layout Specifications"],
+        stack: ["UI/UX Design", "Figma", "Wireframing", "Visual Hierarchy", "Prototyping"]
+      }
+    };
+
+    function openModal(id) {
+      const data = projectData[id];
+      if (!data) return;
+
+      const modalContent = document.getElementById("modal-content");
+      modalContent.innerHTML = `
+        <div class="relative mb-6 rounded-xl overflow-hidden h-48 bg-black/40">
+          <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f15] via-transparent to-transparent"></div>
+        </div>
+
+        <span class="text-xs font-semibold text-purple-400 bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full">
+          ${data.category}
+        </span>
+
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-3 mb-2">${data.title}</h2>
+        <p class="text-purple-400 text-sm font-medium mb-4">Role: ${data.role}</p>
+
+        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+          ${data.description}
+        </p>
+
+        <h4 class="text-white font-semibold text-sm mb-3">Key Deliverables:</h4>
+        <ul class="space-y-2 text-xs text-gray-300 mb-6 bg-white/5 p-4 rounded-xl border border-white/5">
+          ${data.deliverables.map(item => `<li class="flex items-center gap-2"><span class="text-purple-400">✦</span> ${item}</li>`).join('')}
+        </ul>
+
+        <h4 class="text-white font-semibold text-sm mb-3">Tech & Skills Used:</h4>
+        <div class="flex flex-wrap gap-2 mb-6">
+          ${data.stack.map(tag => `<span class="px-3 py-1 text-xs rounded-full bg-purple-400/10 text-purple-300 border border-purple-400/20">${tag}</span>`).join('')}
+        </div>
+
+        <div class="flex justify-end gap-3 pt-4 border-t border-white/10">
+          <button onclick="closeModal()" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-sm font-medium transition">
+            Close
+          </button>
+          <a href="index.html#contact" class="px-5 py-2.5 bg-purple-500 hover:bg-purple-600 text-white rounded-xl text-sm font-medium transition shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+            Hire for Similar Project
+          </a>
+        </div>
+      `;
+
+      const modal = document.getElementById("project-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("project-modal");
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+    }
+
+    // Close modal when clicking outside box
+    document.getElementById("project-modal").addEventListener("click", (e) => {
+      if (e.target.id === "project-modal") {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+
+</html>
